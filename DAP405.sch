@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:DAP405-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -585,7 +586,7 @@ ULPI_STP
 Text Label 4000 4300 2    50   ~ 0
 ULPI_CLK
 Text Label 4000 4400 2    50   ~ 0
-~RESET
+ULPI_RST
 Wire Wire Line
 	4000 3200 3400 3200
 Wire Wire Line
@@ -1226,10 +1227,6 @@ Wire Wire Line
 Connection ~ 5400 6500
 Wire Wire Line
 	5400 6500 5400 6600
-Wire Wire Line
-	4750 6300 4100 6300
-Wire Wire Line
-	4100 6300 4100 6200
 NoConn ~ 5250 6300
 Text Label 4400 6400 0    50   ~ 0
 T_~TRST
@@ -1553,9 +1550,6 @@ F 3 "~" H 4100 6600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4100 6800 4750 6800
-Wire Wire Line
-	4100 6300 4100 6500
-Connection ~ 4100 6300
 Wire Wire Line
 	4100 6800 4100 6700
 Text Label 9200 1200 0    50   ~ 0
@@ -2131,6 +2125,56 @@ LED_ACT
 NoConn ~ 6900 3300
 NoConn ~ 6900 2600
 NoConn ~ 5500 3600
-NoConn ~ 5500 3700
 NoConn ~ 5500 4100
+Text Label 5100 3700 0    50   ~ 0
+ULPI_RST
+Wire Wire Line
+	5100 3700 5500 3700
+$Comp
+L Device:D_Zener_Small D4
+U 1 1 5D90D4CC
+P 9100 4800
+F 0 "D4" V 9054 4868 50  0000 L CNN
+F 1 "SMF5.0A" V 9145 4868 50  0000 L CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 9100 4800 50  0001 C CNN
+F 3 "~" V 9100 4800 50  0001 C CNN
+	1    9100 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 5D90FBB5
+P 9100 5000
+F 0 "#PWR0138" H 9100 4750 50  0001 C CNN
+F 1 "GND" H 9105 4827 50  0000 C CNN
+F 2 "" H 9100 5000 50  0001 C CNN
+F 3 "" H 9100 5000 50  0001 C CNN
+	1    9100 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 3700 9100 4700
+Connection ~ 9100 3700
+Wire Wire Line
+	9100 4900 9100 5000
+Wire Wire Line
+	4100 6200 4100 6300
+$Comp
+L Device:Polyfuse_Small F2
+U 1 1 5D95B670
+P 4300 6300
+F 0 "F2" V 4095 6300 50  0000 C CNN
+F 1 "200mA" V 4186 6300 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4350 6100 50  0001 L CNN
+F 3 "~" H 4300 6300 50  0001 C CNN
+	1    4300 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 6300 4750 6300
+Wire Wire Line
+	4200 6300 4100 6300
+Connection ~ 4100 6300
+Wire Wire Line
+	4100 6300 4100 6500
 $EndSCHEMATC
