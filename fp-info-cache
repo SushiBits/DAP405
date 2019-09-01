@@ -1,4 +1,4 @@
-16331703179352812
+16334848288841812
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -52374,6 +52374,13 @@ mounting hole 2.7mm no annular m2.5
 0
 0
 MountingHole
+MountingHole_2.7mm_M2.5_Back6.2
+Mounting Hole 2.7mm, no annular, M2.5
+mounting hole 2.7mm no annular m2.5
+0
+0
+0
+MountingHole
 MountingHole_2.7mm_M2.5_DIN965
 Mounting Hole 2.7mm, no annular, M2.5, DIN965
 mounting hole 2.7mm no annular m2.5 din965
@@ -55306,6 +55313,13 @@ DFN 0.5
 0
 27
 19
+Package_DFN_QFN
+DFN-18_9.7x10.1mm_P1.1mm
+
+
+0
+18
+18
 Package_DFN_QFN
 DFN-20-1EP_5x6mm_P0.5mm_EP3.24x4.24mm
 DFN20, 6x5, 0.5P; CASE 505AB (see ON Semiconductor 505AB.PDF)
